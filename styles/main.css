@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+body header nav a {
+  font-family: HSJiptokki-Black;
+}
+body main {
+  width: 1200px;
+  margin: 0 auto;
+}
+body main div > h1 {
+  font-family: HSJiptokki-Black;
+  font-size: 4.375rem;
+}
+body main div > .bg_odd {
+  background-color: #4BB9EC;
+}
+body main div > .bg_even {
+  background-color: #A5E23B;
+}/*# sourceMappingURL=main.css.map */

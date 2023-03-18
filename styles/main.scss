@@ -1,0 +1,25 @@
+$body:#001695;
+$sky:#4BB9EC;
+$green:#A5E23B;
+
+@mixin layout {width:1200px; margin:0 auto;}
+@mixin nav_title {font-family:HSJiptokki-Black;}
+@mixin page_title {font-family:HSJiptokki-Black; font-size:4.375rem;}
+body {
+    // background-color:$body;
+    text-align: center;
+    header {
+        h1 {
+            a {}
+        }
+        nav {
+            a {@include nav_title;}
+        }
+    }
+    main {
+        @include layout;
+        div > h1 {@include page_title;}
+        div > .bg_odd {background-color:$sky;}
+        div > .bg_even {background-color:$green;}
+    }
+}//e:body
