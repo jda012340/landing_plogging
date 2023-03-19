@@ -1,20 +1,170 @@
 body {
+  background-color: #001695;
   text-align: center;
 }
+body header {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+body header h1 {
+  margin-bottom: 80px;
+}
+body header h1 a {
+  font-family: "Poller One";
+  font-size: 1.563rem;
+  color: #fff;
+}
+body header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
 body header nav a {
-  font-family: HSJiptokki-Black;
+  width: 16.66%;
+  background-color: #fff;
+  padding: 16px 0;
+  font-size: 1.875rem;
+  border-radius: 15px 15px 0 0;
+  color: #001695;
+  font-family: "Poller One";
+}
+body header nav a:hover {
+  background-color: #001695;
+  color: #fff;
 }
 body main {
   width: 1200px;
   margin: 0 auto;
 }
 body main div > h1 {
-  font-family: HSJiptokki-Black;
+  font-family: "Poller One";
   font-size: 4.375rem;
 }
 body main div > .bg_odd {
   background-color: #4BB9EC;
+  padding: 50px 80px;
 }
 body main div > .bg_even {
   background-color: #A5E23B;
+  padding: 50px 80px;
+}
+body main div > .title_top {
+  margin-bottom: 40px;
+  text-align: left;
+}
+body main div > .title_btm {
+  margin-top: 40px;
+  text-align: right;
+}
+body main #mainpage {
+  margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  border-radius: 0 0 150px 150px;
+}
+body main #mainpage p {
+  border-radius: 100%;
+  position: absolute;
+}
+body main #mainpage p:nth-of-type(1) {
+  width: 1036px;
+  height: 439px;
+  background-color: #4BB9EC;
+  top: -51px;
+  left: -688.5px;
+}
+body main #mainpage p:nth-of-type(2) {
+  width: 510px;
+  height: 439px;
+  background-color: #A5E23B;
+  top: -51px;
+  left: 347px;
+}
+body main #mainpage p:nth-of-type(4) {
+  width: 510px;
+  height: 439px;
+  bottom: -96px;
+  left: -139px;
+  background-color: #A5E23B;
+}
+body main #mainpage p:nth-of-type(4) h1 {
+  font-family: "Poller One";
+  font-size: 4.375rem;
+}
+body main #mainpage p:nth-of-type(5) {
+  width: 439px;
+  height: 439px;
+  bottom: -96px;
+  left: 371px;
+  background-color: #A5E23B;
+}
+body main #mainpage p:nth-of-type(6) {
+  width: 1036px;
+  height: 439px;
+  bottom: -96px;
+  right: -646px;
+  background-color: #4BB9EC;
+}
+body main #contents {
+  margin-bottom: 100px;
+}
+body main #contents #plog {
+  border-radius: 150px 150px 0 0;
+}
+body main #contents #about h2 {
+  font-family: "East Sea Dokdo";
+  font-size: 4.375rem;
+  margin-bottom: 32px;
+}
+body main #contents div > p {
+  font-family: "NanumSquareNeo-Variable";
+  font-size: 1.563rem;
+  line-height: 1.6;
+}
+body main #contents #howto ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body main #contents #howto ul li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 330px;
+}
+body main #contents #howto ul li h2 {
+  display: inline-block;
+  font-size: 3.125rem;
+  font-weight: 800;
+  background-color: #A5E23B;
+  padding: 10px 0;
+  color: #001695;
+}
+body main #contents #howto ul li p span {
+  color: #001695;
+  background-color: #fff;
+  font-size: 2.188rem;
+}
+body main #contents #howto ul .li2 h2 {
+  background-color: #001695;
+  color: #A5E23B;
+}
+body main #contents #howto ul .li2 p span {
+  color: #A5E23B;
+}
+body main #contents #foryou {
+  border-radius: 0 0 150px 150px;
+}
+body main #endpage {
+  margin-bottom: 100px;
+}
+body main #endpage button {
+  font-family: "Poller One";
+  font-size: 2.5rem;
+  color: #001695;
+  background-color: #A5E23B;
+  padding: 10px 15px;
+  border-radius: 100%;
 }/*# sourceMappingURL=main.css.map */

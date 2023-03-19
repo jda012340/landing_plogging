@@ -1,25 +1,119 @@
+//bg_color
 $body:#001695;
-$sky:#4BB9EC;
-$green:#A5E23B;
+$odd:#4BB9EC;
+$even:#A5E23B;
 
 @mixin layout {width:1200px; margin:0 auto;}
-@mixin nav_title {font-family:HSJiptokki-Black;}
-@mixin page_title {font-family:HSJiptokki-Black; font-size:4.375rem;}
+@mixin nav_title {font-family:'Poller One';}
+@mixin page_title {font-family:'Poller One'; font-size:4.375rem;}
+@mixin flex_row {display:flex; flex-flow:row nowrap; justify-content:space-between;}
+@mixin flex_column {display:flex; flex-flow:column nowrap; justify-content:space-between;}
+
 body {
-    // background-color:$body;
+    background-color:$body;
     text-align: center;
+    //* {margin-bottom:70px;}
     header {
+        @include layout; margin-top:20px;
         h1 {
-            a {}
+            margin-bottom:80px;
+            a {
+                font-family:'Poller One';
+                font-size:1.563rem;
+                color:#fff;
+            }
         }
         nav {
-            a {@include nav_title;}
+            //background-color:aqua;
+            @include flex_row;
+            a {
+                width:16.66%; background-color:#fff; padding:16px 0; font-size:1.875rem; border-radius:15px 15px 0 0; color:$body;
+                @include nav_title;
+            }
+            a:hover {background-color:$body; color:#fff;}
         }
-    }
+    }//e:header
     main {
         @include layout;
         div > h1 {@include page_title;}
-        div > .bg_odd {background-color:$sky;}
-        div > .bg_even {background-color:$green;}
-    }
+        div > .bg_odd {background-color:$odd; padding:50px 80px;}
+        div > .bg_even {background-color:$even; padding:50px 80px;}
+        div > .title_top {margin-bottom:40px; text-align:left;}
+        div > .title_btm {margin-top:40px; text-align:right;}
+        #mainpage {
+            margin-bottom:100px;
+            //background-color:beige;
+            position:relative; overflow:hidden; height:700px;
+            border-radius:0 0 150px 150px;
+            p {border-radius:100%; position:absolute;}
+            p:nth-of-type(1) {width:1036px; height:439px; background-color:$odd;
+                top:-51px; left:-688.5px; 
+            }
+            p:nth-of-type(2) {
+                width:510px; height:439px; background-color:$even;
+                top:-51px; left:347px;
+            } 
+            // p:nth-of-type(3) {width:; height:;}
+            p:nth-of-type(4) {
+                width:510px; height:439px;
+                bottom:-96px; left:-139px; background-color:$even;
+                h1 { @include page_title;}
+            }
+            p:nth-of-type(5) {
+                width:439px; height:439px;
+                bottom:-96px; left:371px; background-color:$even;}
+            p:nth-of-type(6) {
+                width:1036px; height:439px;
+                bottom:-96px; right:-646px; background-color:$odd;}
+        }//e:mainpage
+        #contents {
+            margin-bottom:100px;
+            #plog {
+                border-radius:150px 150px 0 0;
+            }
+            #about {
+                h2 {
+                    font-family:'East Sea Dokdo'; font-size:4.375rem;
+                    margin-bottom:32px;
+                }
+                p {}
+            }
+            div > p {font-family:'NanumSquareNeo-Variable'; font-size:1.563rem; line-height:1.6;}
+            #howto {
+                h1 {}
+                ul {
+                    @include flex_column;
+                    li {
+                        @include flex_row;
+                        width:330px;
+                        h2 {display:inline-block; font-size:3.125rem; font-weight:800; background-color:$even; padding:10px 0; color:$body;}
+                        p {
+                            span {
+                                color:$body;
+                                background-color:#fff;
+                                font-size:2.188rem;
+                            }
+                        }
+                    }
+                    .li2 {
+                        h2 {background-color:$body; color:$even;}
+                        p {
+                            span {color:$even;}
+                        }
+                    }
+                }
+            }//e:howto
+            #foryou {
+                border-radius:0 0 150px 150px;
+            }
+        }
+        #endpage {
+            margin-bottom:100px;
+            p {}
+            button {
+                font-family:'Poller One'; font-size:2.5rem; color:$body;
+                background-color:$even; padding:10px 15px; border-radius:100%;
+            }
+        }
+    }//e:main
 }//e:body
