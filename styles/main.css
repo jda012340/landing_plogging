@@ -19,6 +19,7 @@ body header nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 body header nav a {
   width: 16.66%;
@@ -46,7 +47,7 @@ body main div > .bg_odd {
   padding: 50px 80px;
 }
 body main div > .bg_even {
-  background-color: #A5E23B;
+  background-color: #91FF5B;
   padding: 50px 80px;
 }
 body main div > .title_top {
@@ -78,16 +79,24 @@ body main #mainpage p:nth-of-type(1) {
 body main #mainpage p:nth-of-type(2) {
   width: 510px;
   height: 439px;
-  background-color: #A5E23B;
+  background-color: #91FF5B;
   top: -51px;
   left: 347px;
+}
+body main #mainpage p:nth-of-type(3) {
+  width: 474px;
+  height: 474px;
+  top: -39px;
+  right: -79px;
+  background-image: url(../images/earth.png);
+  background-size: 100%;
 }
 body main #mainpage p:nth-of-type(4) {
   width: 510px;
   height: 439px;
   bottom: -96px;
   left: -139px;
-  background-color: #A5E23B;
+  background-color: #91FF5B;
 }
 body main #mainpage p:nth-of-type(4) h1 {
   font-family: "Poller One";
@@ -98,7 +107,7 @@ body main #mainpage p:nth-of-type(5) {
   height: 439px;
   bottom: -96px;
   left: 371px;
-  background-color: #A5E23B;
+  background-color: #91FF5B;
 }
 body main #mainpage p:nth-of-type(6) {
   width: 1036px;
@@ -112,6 +121,12 @@ body main #contents {
 }
 body main #contents #plog {
   border-radius: 150px 150px 0 0;
+}
+body main #contents #about {
+  background-image: url(../images/tape_bg.png);
+  background-repeat: no-repeat;
+  background-size: 900px 530px;
+  background-position: center 42px;
 }
 body main #contents #about h2 {
   font-family: "East Sea Dokdo";
@@ -132,27 +147,46 @@ body main #contents #howto ul li {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 330px;
+  align-items: center;
 }
-body main #contents #howto ul li h2 {
+body main #contents #howto ul li > p {
+  width: 500px;
+  height: 400px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+body main #contents #howto ul li .howto_contents h2 {
   display: inline-block;
   font-size: 3.125rem;
   font-weight: 800;
-  background-color: #A5E23B;
+  background-color: #91FF5B;
   padding: 10px 0;
   color: #001695;
 }
-body main #contents #howto ul li p span {
+body main #contents #howto ul li .howto_contents p span {
   color: #001695;
   background-color: #fff;
   font-size: 2.188rem;
+  margin-bottom: 30px;
 }
-body main #contents #howto ul .li2 h2 {
+body main #contents #howto ul li .howto_contents p:last-child span {
+  margin-bottom: 0;
+}
+body main #contents #howto ul li .li2 h2 {
   background-color: #001695;
-  color: #A5E23B;
+  color: #91FF5B;
 }
-body main #contents #howto ul .li2 p span {
-  color: #A5E23B;
+body main #contents #howto ul li .li2 p span {
+  color: #91FF5B;
+}
+body main #contents #howto ul li:first-child > p {
+  background-image: url(../images/01walk.png);
+}
+body main #contents #howto ul li:nth-child(2) > p {
+  background-image: url(../images/02put.png);
+}
+body main #contents #howto ul li:last-child > p {
+  background-image: url(../images/03clean.png);
 }
 body main #contents #foryou {
   border-radius: 0 0 150px 150px;
@@ -160,11 +194,19 @@ body main #contents #foryou {
 body main #endpage {
   margin-bottom: 100px;
 }
+body main #endpage p {
+  width: 700px;
+  height: 700px;
+  margin: 0 auto 20px;
+}
+body main #endpage p img {
+  width: 100%;
+}
 body main #endpage button {
   font-family: "Poller One";
   font-size: 2.5rem;
   color: #001695;
-  background-color: #A5E23B;
+  background-color: #91FF5B;
   padding: 10px 15px;
   border-radius: 100%;
 }/*# sourceMappingURL=main.css.map */

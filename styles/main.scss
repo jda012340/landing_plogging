@@ -1,12 +1,13 @@
 //bg_color
 $body:#001695;
 $odd:#4BB9EC;
-$even:#A5E23B;
+$even:#91FF5B;
 
 @mixin layout {width:1200px; margin:0 auto;}
 @mixin nav_title {font-family:'Poller One';}
 @mixin page_title {font-family:'Poller One'; font-size:4.375rem;}
-@mixin flex_row {display:flex; flex-flow:row nowrap; justify-content:space-between;}
+@mixin flex_row {display:flex; flex-flow:row nowrap; justify-content:space-between;
+align-items: center;}
 @mixin flex_column {display:flex; flex-flow:column nowrap; justify-content:space-between;}
 
 body {
@@ -53,7 +54,8 @@ body {
                 width:510px; height:439px; background-color:$even;
                 top:-51px; left:347px;
             } 
-            // p:nth-of-type(3) {width:; height:;}
+            p:nth-of-type(3) {width:474px; height:474px; top:-39px; right:-79px;
+                background-image:url(../images/earth.png); background-size:100%;}
             p:nth-of-type(4) {
                 width:510px; height:439px;
                 bottom:-96px; left:-139px; background-color:$even;
@@ -72,6 +74,8 @@ body {
                 border-radius:150px 150px 0 0;
             }
             #about {
+                background-image:url(../images/tape_bg.png);
+                background-repeat:no-repeat; background-size: 900px 530px; background-position:center 42px;
                 h2 {
                     font-family:'East Sea Dokdo'; font-size:4.375rem;
                     margin-bottom:32px;
@@ -85,21 +89,36 @@ body {
                     @include flex_column;
                     li {
                         @include flex_row;
-                        width:330px;
-                        h2 {display:inline-block; font-size:3.125rem; font-weight:800; background-color:$even; padding:10px 0; color:$body;}
-                        p {
-                            span {
-                                color:$body;
-                                background-color:#fff;
-                                font-size:2.188rem;
+                        // width:21;
+                        > p {
+                            width:500px; height:400px; background-size:100%; background-repeat:no-repeat;}
+                        .howto_contents{
+                                h2 {display:inline-block; font-size:3.125rem; font-weight:800; background-color:$even; padding:10px 0; color:$body;}
+                                p {
+                                    span {
+                                        color:$body;
+                                        background-color:#fff;
+                                        font-size:2.188rem;
+                                        margin-bottom:30px;
+                                    }
+                                }
+                                p:last-child {span{margin-bottom:0;}}
+                        }
+                        .li2 {
+                            h2 {background-color:$body; color:$even;}
+                            p {
+                                span {color:$even;}
                             }
                         }
-                    }
-                    .li2 {
-                        h2 {background-color:$body; color:$even;}
-                        p {
-                            span {color:$even;}
                         }
+                    li:first-child {
+                        > p {background-image:url(../images/01walk.png);}
+                    }
+                    li:nth-child(2) {
+                        > p {background-image:url(../images/02put.png);}
+                    }
+                    li:last-child {
+                        > p {background-image:url(../images/03clean.png);}
                     }
                 }
             }//e:howto
@@ -109,7 +128,9 @@ body {
         }
         #endpage {
             margin-bottom:100px;
-            p {}
+            p { width:700px; height:700px; margin:0 auto 20px;
+                img {width:100%;}
+            }
             button {
                 font-family:'Poller One'; font-size:2.5rem; color:$body;
                 background-color:$even; padding:10px 15px; border-radius:100%;
