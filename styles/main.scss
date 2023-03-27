@@ -1,7 +1,7 @@
 //bg_color
 $body:#001695;
 $odd:#4BB9EC;
-$even:#91FF5B;
+$even:#A5E23B;
 
 @mixin layout {width:1200px; margin:0 auto;}
 @mixin nav_title {font-family:'Poller One';}
@@ -36,7 +36,15 @@ body {
                 width:16.66%; background-color:#fff; padding:16px 0; font-size:1.875rem; border-radius:15px 15px 0 0; color:$body;
                 @include nav_title;
             }
-            a:hover {background-color:$body; color:#fff;}
+            a:hover {
+                color:#fff; border-radius:100%; width:15%; transform:scale(1.0);
+            }
+            a:nth-child(odd):hover {
+                background-color:$odd;
+            }
+            a:nth-child(even):hover {
+                background-color:$even;
+            }
         }
     }//e:header
     main {
@@ -102,21 +110,24 @@ body {
                         > p {
                             width:500px; height:400px; background-size:100%; background-repeat:no-repeat;}
                         .howto_contents{
-                                h2 {display:inline-block; font-size:3.125rem; font-weight:800; background-color:$even; padding:10px 0; color:$body;}
+                                h2 {display:inline-block; font-size:3.125rem; font-weight:800; background-color:$even; padding:10px 0; color:$body;
+                                margin-bottom:20px;}
                                 p {
                                     span {
                                         color:$body;
                                         background-color:#fff;
                                         font-size:2.188rem;
-                                        margin-bottom:30px;
+                                        line-height:1.4;
+                                    }
+                                    span:last-child {
+                                        margin-bottom:0;
                                     }
                                 }
-                                p:last-child {span{margin-bottom:0;}}
                         }
                         .li2 {
                             h2 {background-color:$body; color:$even;}
                             p {
-                                span {color:$even;}
+                                span {}
                             }
                         }
                         }
@@ -141,6 +152,9 @@ body {
                         width:100%;
                     }
                 }
+                .text {
+                    margin-top:20px;
+                }
             }
             #foryou::before {
                 position:absolute; top:0; left:0;
@@ -156,6 +170,11 @@ body {
             margin-bottom:100px;
             p { width:700px; height:700px; margin:0 auto 20px;
                 img {width:100%;}
+            }
+            p:hover {
+                background-image:url(../images/apply.png);
+                background-size:cover;
+                img {display:none;}
             }
             button {
                 font-family:'Poller One'; font-size:2.5rem; color:$body;
