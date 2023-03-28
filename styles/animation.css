@@ -1,0 +1,98 @@
+@-webkit-keyframes move {
+  0% {
+    transform: translate(0);
+  }
+  12% {
+    transform: translate(10px, 10px);
+  }
+  24% {
+    transform: translate(0);
+  }
+  36% {
+    transform: translate(-10px, -10px);
+  }
+  48% {
+    transform: translate(0);
+  }
+  60% {
+    transform: translate(-10, 10px);
+  }
+  72% {
+    transform: translate(0, 0);
+  }
+  86% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+  12% {
+    transform: translate(10px, 10px);
+  }
+  24% {
+    transform: translate(0);
+  }
+  36% {
+    transform: translate(-10px, -10px);
+  }
+  48% {
+    transform: translate(0);
+  }
+  60% {
+    transform: translate(-10, 10px);
+  }
+  72% {
+    transform: translate(0, 0);
+  }
+  86% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+main #mainpage p:nth-child(3) {
+  -webkit-animation: rotate360 5s linear infinite;
+          animation: rotate360 5s linear infinite;
+}
+main #mainpage:hover p:nth-child(1) {
+  -webkit-animation: move 3s linear infinite;
+          animation: move 3s linear infinite;
+}
+main #mainpage:hover p:nth-child(2) {
+  -webkit-animation: move 3s linear infinite;
+          animation: move 3s linear infinite;
+}
+main #mainpage:hover p:nth-child(4) {
+  -webkit-animation: move 3s linear infinite;
+          animation: move 3s linear infinite;
+}
+main #mainpage:hover p:nth-child(5) {
+  -webkit-animation: move 3s linear infinite;
+          animation: move 3s linear infinite;
+}
+main #mainpage:hover p:nth-child(6) {
+  -webkit-animation: move 3s linear infinite;
+          animation: move 3s linear infinite;
+}/*# sourceMappingURL=animation.css.map */

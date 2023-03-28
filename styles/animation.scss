@@ -1,0 +1,37 @@
+@keyframes move {
+    0% {transform:translate(0);}
+    12% {transform:translate(10px, 10px);}
+    24% {transform:translate(0);}
+    36% {transform:translate(-10px, -10px);}
+    48% {transform:translate(0);}
+    60% {transform:translate(-10, 10px);}
+    72% {transform:translate(0, 0);}
+    86% {transform:translate(10px, -10px);}
+    100% {transform:translate(0, 0);}
+}
+// keyframes를 두개로 나눠서 하기!
+@keyframes rotate360 {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}
+}
+
+main {
+    #mainpage {
+        p {}
+        p:nth-child(1) {}
+        p:nth-child(2) {}
+        p:nth-child(3) {
+            animation:rotate360 5s linear infinite;}
+        p:nth-child(4) {}
+        p:nth-child(5) {}
+        p:nth-child(6) {}
+    }
+    #mainpage:hover {
+        p{}
+        p:nth-child(1) {animation:move 3s linear infinite;}
+        p:nth-child(2) {animation:move 3s linear infinite;}
+        p:nth-child(4) {animation:move 3s linear infinite;}
+        p:nth-child(5) {animation:move 3s linear infinite;}
+        p:nth-child(6) {animation:move 3s linear infinite;}
+    }
+}
