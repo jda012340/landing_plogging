@@ -12,11 +12,26 @@ align-items: center;}
 
 body {
     background-color:$body;
+    background-image:url(../images/recycle.png);
+    background-repeat:repeat-x;
+    background-size:100%; background-position:0 500px; background-attachment:fixed;
     text-align: center;
+    // animation:rotate30 2s linear infinite;
+    // animation:move 150s linear infinite;
     //* {margin-bottom:70px;}
     .side_nav {
         a {
             display:block;
+        }
+    }
+    //움직이는오브제
+    .bg_ani {
+        > * {
+            position:fixed;}
+        .recycle {
+            width:10px; height:10px;
+            animation:rotate30 2s linear alternate infinite;
+            img {width:100%;}
         }
     }
     header {
@@ -55,6 +70,7 @@ body {
         div > .title_top {margin-bottom:40px; text-align:left;}
         div > .title_btm {margin-top:40px; text-align:right;}
         #mainpage {
+            background-color:$body;
             margin-bottom:100px;
             //background-color:beige;
             position:relative; overflow:hidden; height:700px;
@@ -167,6 +183,7 @@ body {
             }
         }
         #endpage {
+            background-color:$body;
             margin-bottom:100px;
             p { width:700px; height:700px; margin:0 auto 20px;
                 img {width:100%;}

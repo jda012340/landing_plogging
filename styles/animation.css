@@ -72,6 +72,30 @@
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes rotate30 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes rotate30 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes move {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 10000px;
+  }
+}
 main #mainpage p:nth-child(3) {
   -webkit-animation: rotate360 5s linear infinite;
           animation: rotate360 5s linear infinite;

@@ -1,9 +1,26 @@
 body {
   background-color: #001695;
+  background-image: url(../images/recycle.png);
+  background-repeat: repeat-x;
+  background-size: 100%;
+  background-position: 0 500px;
+  background-attachment: fixed;
   text-align: center;
 }
 body .side_nav a {
   display: block;
+}
+body .bg_ani > * {
+  position: fixed;
+}
+body .bg_ani .recycle {
+  width: 10px;
+  height: 10px;
+  -webkit-animation: rotate30 2s linear alternate infinite;
+          animation: rotate30 2s linear alternate infinite;
+}
+body .bg_ani .recycle img {
+  width: 100%;
 }
 body header {
   width: 1200px;
@@ -70,6 +87,7 @@ body main div > .title_btm {
   text-align: right;
 }
 body main #mainpage {
+  background-color: #001695;
   margin-bottom: 100px;
   position: relative;
   overflow: hidden;
@@ -227,6 +245,7 @@ body main #contents #foryou::before {
   background-position: 180px 55px;
 }
 body main #endpage {
+  background-color: #001695;
   margin-bottom: 100px;
 }
 body main #endpage p {
